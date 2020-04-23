@@ -7,7 +7,7 @@
 // encryption schemes.
 
 //this is xor encryption
-
+//ONLY ERROR:  NO OUTPUT TO TEXT FILE.
 
 char encryptDecrypt(char inpString[]) 
 { 
@@ -26,7 +26,7 @@ char encryptDecrypt(char inpString[])
         inpString[i] = inpString[i] ^ xorKey;
         std::cout << inpString[i];
     } 
-    return inpString[i];
+    return inpString[i]; // dependancy for line 51
 } 
 
 void a() {
@@ -49,7 +49,7 @@ void a() {
     } else {
         int eSize = sizeof(str);
         char edStr = {encryptDecrypt(str)};
-        file << edStr;
+        file << edStr; //output encrypted text to file that can be sent.
         a();   
     }
 }
@@ -66,11 +66,6 @@ int main()
     
     
 }
-
-
-
-
-
 
 
 /*
